@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Find Your Dresscode — BEM ITS Kabinet Titik Bangkit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-shape"></div>
+
+  <header class="banner">
+    <img src="assets/header-titik-bangkit.jpg" alt="BEM ITS Kabinet Titik Bangkit" />
+  </header>
+
+  <main class="container">
+    <div class="logo-row">
+      <span class="tag">Kabinet Titik Bangkit</span>
+    </div>
+
+    <h1 class="title">FIND YOUR<br/>DRESSCODE</h1>
+    <p class="subtitle">Masukkan nama kamu untuk cari tau dresscode kamu besok ✨</p>
+
+    <form id="searchForm" class="search-box" autocomplete="off">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Ketik nama kamu..."
+        required
+      />
+      <button type="submit">Cari</button>
+    </form>
+
+    <div id="suggestions" class="suggestions"></div>
+
+    <div id="resultArea" class="result-area"></div>
+
+    <div id="emptyState" class="empty-state">
+      <p>Belum nemu dresscode kamu? Coba cek lagi ejaan namanya ya!</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>BEM ITS × Kabinet Titik Bangkit</p>
+  </footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

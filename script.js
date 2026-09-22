@@ -21,9 +21,8 @@ function renderSuggestions(matches) {
     return;
   }
   matches.slice(0, 6).forEach((s) => {
-    const dc = DRESSCODE_MAP[s.divisiKode];
     const btn = document.createElement("button");
-    btn.innerHTML = `${s.nama} <span class="nrp">— ${dc ? dc.nama : s.divisiKode}</span>`;
+    btn.innerHTML = `${s.nama}`;
     btn.addEventListener("click", () => {
       input.value = s.nama;
       suggestionsBox.classList.remove("active");
@@ -63,7 +62,6 @@ function showResult(staff) {
   resultArea.innerHTML = `
     <div class="result-card">
       <div class="name">${staff.nama}</div>
-      <div class="role">${dc.nama}</div>
       <div class="dresscode-badge" style="background:${dc.hex}; color:${dc.textColor}; ${borderStyle}">
         <div class="label">Dresscode Kamu</div>
         <div class="color-name">${dc.color}</div>
